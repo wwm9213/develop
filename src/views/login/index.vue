@@ -27,13 +27,14 @@
   </div>
 </template>
 <script>
+import md5 from "js-md5";
 export default {
   data() {
     return {
       ruleForm: {
-        userName: "",
-        userNum: "",
-        password: ""
+        userName: "离心力",
+        userNum: "17603489036",
+        password: "1103285071."
       },
       rules: {
         userName: [
@@ -61,6 +62,7 @@ export default {
       }
     };
   },
+  created() {},
   methods: {
     submitForm(formName) {
       this.$refs[formName].validate(valid => {
@@ -86,7 +88,7 @@ export default {
   .login-box {
     width: 600px;
     border: 1px solid #ccc;
-    background: linear-gradient(to bottom right, #8fcfd1, #d3dbff,#1dd3bd);
+    background: linear-gradient(to bottom right, #8fcfd1, #d3dbff, #1dd3bd);
     border-radius: 10px;
     padding: 25px 25px 0 25px;
     box-sizing: border-box;
